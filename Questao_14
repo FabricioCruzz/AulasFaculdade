@@ -1,0 +1,57 @@
+package exercicios_metodos_e_recursividade;
+
+import java.util.Scanner;
+
+public class Questao_14 {
+	
+	static int somaImpares = 0;
+	static int quantidade = 0;
+	static int impar = 1;
+	static boolean resetaVariaveis = false;
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Digite um número: ");
+		int n = scanner.nextInt();
+		
+		for(int i = 1; i <= n; i++) {
+			quadradoPerfeito(i);
+			if(resetaVariaveis == true) {
+				somaImpares = 0;
+				quantidade = 0;
+				impar = 1;
+				resetaVariaveis = false;
+//				System.out.println(somaImpares);
+//				System.out.println(quantidade);
+//				System.out.println(impar);
+			}
+		}
+		
+		
+		
+		scanner.close();
+	}
+	public static boolean quadradoPerfeito(int numero) {
+		
+		if (somaImpares == numero) {
+			System.out.println("Raiz Quadrada de " + numero + ": " + quantidade);
+			resetaVariaveis = true;
+			return true;
+		}
+		else {
+			somaImpares = somaImpares + impar;
+			quantidade++;
+			impar += 2;
+		}
+		return quadradoPerfeito(numero);
+		
+		
+		
+		
+		
+	}
+
+}
