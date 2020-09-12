@@ -22,9 +22,6 @@ public class Questao_14 {
 				quantidade = 0;
 				impar = 1;
 				resetaVariaveis = false;
-//				System.out.println(somaImpares);
-//				System.out.println(quantidade);
-//				System.out.println(impar);
 			}
 		}
 		
