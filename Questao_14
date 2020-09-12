@@ -1,5 +1,3 @@
-package exercicios_metodos_e_recursividade;
-
 import java.util.Scanner;
 
 public class Questao_14 {
@@ -40,6 +38,10 @@ public class Questao_14 {
 			System.out.println("Raiz Quadrada de " + numero + ": " + quantidade);
 			resetaVariaveis = true;
 			return true;
+		}
+		else if(somaImpares > numero) {
+			resetaVariaveis = true;
+			return false;
 		}
 		else {
 			somaImpares = somaImpares + impar;
